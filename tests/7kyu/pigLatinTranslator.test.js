@@ -8,5 +8,13 @@ describe("Pig latin translator", () => {
     });
   }
 
+  function testIfWordBeginsWithConsonant(word) {
+    const expected = "illybay";
+    test("If a word begins with a consonant, then that first letter is shifted to the end of the word and add 'ay'", () => {
+      expect(pigLatinTranslator(word)).toBe(expected);
+    });
+  }
+
   testWordsLengthLessThan2ReturnWord("b");
+  testIfWordBeginsWithConsonant("billy");
 });
