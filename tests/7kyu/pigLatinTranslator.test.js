@@ -15,6 +15,16 @@ describe("Pig latin translator", () => {
     });
   }
 
+  function testIfWordBeginsWithVowel(word) {
+    const expected = "emilyay";
+    test("If a word begins with a vowels, return word and add 'ay'", () => {
+      expect(pigLatinTranslator(word)).toBe(expected);
+    });
+  }
+
   testWordsLengthLessThan2ReturnWord("b");
+
   testIfWordBeginsWithConsonant("billy");
+
+  testIfWordBeginsWithVowel("emily");
 });

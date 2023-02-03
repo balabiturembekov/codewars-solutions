@@ -5,6 +5,8 @@ const pigLatinTranslator = (word) => {
     const firstLetter = word.split("").shift();
     const sliceWord = word.slice(1).toLowerCase();
     return `${sliceWord}${firstLetter}ay`;
+  } else {
+    return `${word}ay`;
   }
 };
 
